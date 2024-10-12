@@ -1,6 +1,6 @@
 #ifndef LISTTEMP_H
 #define LISTTEMP_H
-
+#include <cstddef>
 template<class T>
 class ListCont
 {
@@ -159,7 +159,11 @@ bool ListCont<T>::isEmpty() const
 template<class T>
 void ListCont<T>::addHead(const T& newData)
 {
-	//Task 1: Please implement this!
+	Node* newPtr = new Node;//Task 1: Please implement this!
+	newPtr->data = newData;
+	newPtr->next = head;
+	head = newPtr;
+	size++;
 }
 
 
