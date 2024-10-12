@@ -1,5 +1,6 @@
 #ifndef LISTTEMP_H
 #define LISTTEMP_H
+#include <cstddef>
 
 template<class T>
 class ListCont
@@ -35,7 +36,7 @@ public:
 template<class T>
 ListCont<T>::ListCont()
 {
-	head = NULL; //empty list
+	head = nullptr; //empty list
 	size = 0;
 }
 
@@ -44,7 +45,7 @@ ListCont<T>::~ListCont()
 {
 	Node *current = head;
 	Node* temp;
-	while (current != NULL)
+	while (current != nullptr)
 	{
 		temp = current;
 		current = current->next;
@@ -68,6 +69,11 @@ template<class T>
 void ListCont<T>::addHead(const T& newData)
 {
 	//Task 1: Please implement this!
+	Node* newPtr = new Node;
+	newPtr->data = newData;
+	newPtr->next=head;
+	head=newPtr;
+	size++;
 }
 
 
