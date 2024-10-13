@@ -53,9 +53,9 @@ public:
 		// is positioned at has been returned.
 		T& operator*() const;
 
-		// Postcondition: true has been returned if the
-		// iterator is equal to other; otherwise,
-		// false has been returned.
+					// Postcondition: true has been returned if the
+					// iterator is equal to other; otherwise,
+					// false has been returned.
 		bool operator==(const Iterator other) const;
 
 	};//class Iterator
