@@ -3,6 +3,7 @@ package javalearn.lab2.core;
 public class Edge {
     private Node from,to;
 
+    public Edge(){};
     public Edge(Node f,Node t){
         setFrom(f);
         setTo(t);

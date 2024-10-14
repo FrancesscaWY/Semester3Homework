@@ -18,7 +18,11 @@ public class Entity extends Node{
         attribute=a;
     }
 
-//    Method set type,name,attribute
+    public Entity(int i, String type, String name, String attribute) {
+        this(" "," "," ");
+    }
+
+    //    Method set type,name,attribute
     public void setType(String t){type=t;}
     public void setName(String n){name=n;}
     public void setAttribute(String a){attribute=a;}
