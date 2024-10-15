@@ -58,7 +58,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>javalearn.lab2.lab2/javalearn.lab2.lab2.HelloApplication</mainClass>
+              <mainClass>javalearn.lab2.lab2/javalearn.lab2.lab2.KGApp</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

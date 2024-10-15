@@ -6,6 +6,9 @@ public class Entity extends Node{
     private String name;
     private String attribute;
 
+
+//    Constructor with no parameter
+    public Entity(){this("","","");}
 //    Constructor with one parameter
     public Entity(String n){
         this(" ",n," ");
