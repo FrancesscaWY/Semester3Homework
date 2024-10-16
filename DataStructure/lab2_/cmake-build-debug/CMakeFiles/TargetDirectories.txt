@@ -1,0 +1,3 @@
+/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/lab2.dir
+/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/rebuild_cache.dir

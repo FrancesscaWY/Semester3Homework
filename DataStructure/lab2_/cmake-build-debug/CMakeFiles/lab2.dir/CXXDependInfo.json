@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug",
+	"dir-cur-src" : "/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_",
+	"dir-top-bld" : "/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug",
+	"dir-top-src" : "/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/lab2.dir"
+}
