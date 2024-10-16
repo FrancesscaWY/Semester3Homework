@@ -4,4 +4,8 @@ project(lab2)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(lab2 main.cpp
-        tasks/listTemp.h)
+        tasks/listTemp.h
+        tasks/Employee.h
+        tasks/Employee.cpp
+        tasks/company.h
+        tasks/company.cpp)

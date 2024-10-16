@@ -4,7 +4,7 @@
 
 #ifndef LISTTEMP_H
 #define LISTTEMP_H
-#define NULL 0;
+
 template <class T>
 class ListTemp{
 private:
@@ -74,7 +74,7 @@ T& ListTemp<T>::Iterator::operator*()const{
 
 template <typename T>
 bool ListTemp<T>::Iterator::operator==(const Iterator other)const {
-    return current=other.current;
+    return current == other.current;
 }
 
 /*class ListTemp*/
@@ -124,13 +124,20 @@ void ListTemp<T>::addHead(const T& newData){
 
 template <typename T>
 void ListTemp<T>::addTail(const T& newData) {
-    Node* tail=head;
-    while(tail->next != nullptr) {
-        tail=tail->next;
+    if(isEmpty()) {
+        Node* temp = new Node();
+        temp->data=newData;
+        head=temp;
+    }else {
+        Node* tail=head;
+        while(tail->next != nullptr) {
+            tail = tail->next;
+        }
+        Node* temp=new Node();
+        temp->data=newData;
+        tail->next=temp;
     }
-    Node* newPtr = new Node();
-    newPtr->data=newData;
-    tail->next=newPtr;
+    size++;
 }
 
 #endif //LISTTEMP_H
