@@ -13,11 +13,9 @@ std::string Employee::getName()const{
   return name;
 }
 
-void Employee::input(int id){
-    std::cout << "Please input your name and gross pay: " <<std::endl;
-    std::string n;
-    std::cin >> n >> grossPay;
-    name = n + std::to_string(id);
+void Employee::input(int id,const std::string& name,double grossPay){
+    this->name = name+std::to_string(id);
+    this->grossPay = grossPay;
 }
 
 void Employee::output()const{

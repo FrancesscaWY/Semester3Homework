@@ -124,20 +124,18 @@ void ListTemp<T>::addHead(const T& newData){
 
 template <typename T>
 void ListTemp<T>::addTail(const T& newData) {
+    Node* newPtr = new Node();
+    newPtr->data =newData;
     if(isEmpty()) {
-        Node* temp = new Node();
-        temp->data=newData;
-        head=temp;
+        head = newPtr;
     }else {
-        Node* tail=head;
-        while(tail->next != nullptr) {
+        Node* tail = head;
+        while(tail->next) {
             tail = tail->next;
         }
-        Node* temp=new Node();
-        temp->data=newData;
-        tail->next=temp;
+        tail->next = newPtr;
     }
-    size++;
+    size ++;
 }
 
 #endif //LISTTEMP_H

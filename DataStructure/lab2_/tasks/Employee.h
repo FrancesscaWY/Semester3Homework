@@ -13,7 +13,7 @@ class Employee{
 public:
     Employee();
 
-    void input(int id);
+    void input(int id,const std::string& name,double grossPay);
 
     void output()const;
 

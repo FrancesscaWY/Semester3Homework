@@ -7,7 +7,9 @@ void Company::inputEmployeeHead(int total_num){
   int i=1;
   while(total_num) {
     Employee newEmp;
-    newEmp.input(i);
+    std::string name ="Employee";
+    double grossPay = static_cast<double>(rand()%100000);
+    newEmp.input(i,name,grossPay);
     empContainer.addHead(newEmp);
     total_num--;
     i++;
@@ -18,7 +20,9 @@ void Company::inputEmployeeTail(int total_num) {
   int i=1;
   while(total_num) {
     Employee newEmp;
-    newEmp.input(i);
+    std::string name = "Employee";
+    double grossPay = static_cast<double>(rand()%100000);
+    newEmp.input(i,name,grossPay);
     empContainer.addTail(newEmp);
     total_num--;
     i++;
