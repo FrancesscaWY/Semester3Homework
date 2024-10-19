@@ -1,10 +1,10 @@
 package javalearn.lab2;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.nio.file.Files;
 import java.io.File;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -24,6 +24,11 @@ import javalearn.lab2.view.KnowledgeGraphView;
 import java.io.IOException;
 
 public class KGApp extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         VBox global = new VBox();
@@ -31,9 +36,9 @@ public class KGApp extends Application {
 
         HBox top = new HBox();
         TextField pathField = new TextField();
-        pathField.setPromptText("File path");
+        pathField.setPromptText("文件路径");
         pathField.setDisable(true);
-        Button openBtn = new Button("Open file");
+        Button openBtn = new Button("打开文件");
         top.getChildren().addAll(openBtn,pathField);
         HBox.setHgrow(pathField,Priority.ALWAYS);
         top.setSpacing(5);
@@ -60,7 +65,8 @@ public class KGApp extends Application {
             if(selectedFile != null){
                 pathField.setText(selectedFile.getAbsolutePath());
                 try{
-                    textArea.setText(Files.readString(Paths.get(selectedFile.getAbsolutePath()),Charset.forName("utf-8")));
+                    textArea.setText(Files.readString(Paths.get(selectedFile.getAbsolutePath()), StandardCharsets.UTF_8));
+                    textArea.setFont(new Font("Noto Sans CJK", 16));
                 }catch(IOException e1){
                     e1.printStackTrace();
                 }
@@ -79,12 +85,9 @@ public class KGApp extends Application {
             e.consume();
         });
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Graph Tool");
+        primaryStage.setTitle("图表工具");
         primaryStage.show();
 
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 }

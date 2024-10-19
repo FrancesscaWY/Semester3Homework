@@ -23,6 +23,7 @@ public class Relationship extends Edge{
         this.attribute=attribute;
     }
 
+//    Method Setters
     public void setName(String name){
         this.name=name;
     }
@@ -31,6 +32,7 @@ public class Relationship extends Edge{
         this.attribute=attribute;
     }
 
+//    Method Getters
     public String getName(){
         return name;
     }

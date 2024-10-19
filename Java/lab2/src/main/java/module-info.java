@@ -4,5 +4,5 @@ module javalearn.lab2.lab2 {
 
 
     opens javalearn.lab2.lab2 to javafx.fxml;
-    exports javalearn.lab2.lab2;
+    exports javalearn.lab2;
 }

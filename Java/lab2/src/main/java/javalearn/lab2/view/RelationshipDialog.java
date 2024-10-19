@@ -11,7 +11,7 @@ public class RelationshipDialog extends Dialog<Relationship>{
         public RelationshipDialog(Relationship rel){
             relation=rel;
             this.setTitle("");
-            ButtonType okButtonType = new ButtonType("OK",ButtonType.OK.getButtonData());
+            ButtonType okButtonType = new ButtonType("确认",ButtonType.OK.getButtonData());
             getDialogPane().getButtonTypes().addAll(okButtonType,ButtonType.CANCEL);
 
             GridPane grid = new GridPane();

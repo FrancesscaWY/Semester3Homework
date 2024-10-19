@@ -12,8 +12,8 @@ public class EntityDialog extends Dialog<Entity>{
 
     public EntityDialog(Entity e){
         entity = e;
-        this.setTitle("You can change the contents then click \"OK\".");
-        ButtonType okButtonType = new ButtonType("OK",ButtonType.OK.getButtonData());
+        this.setTitle("您可以修改内容，并点击“确认”");
+        ButtonType okButtonType = new ButtonType("确认",ButtonType.OK.getButtonData());
         getDialogPane().getButtonTypes().addAll(okButtonType,ButtonType.CANCEL);
 
         GridPane grid = new GridPane();
@@ -24,11 +24,11 @@ public class EntityDialog extends Dialog<Entity>{
         TextField nameField = new TextField(entity.getName());
         TextField attrField = new TextField(entity.getAttribute());
 
-        grid.add(new Label("Type: "),0,0);
+        grid.add(new Label("类型: "),0,0);
         grid.add(typeField,1,0);
-        grid.add(new Label("Name:"),0,1);
+        grid.add(new Label("名称:"),0,1);
         grid.add(nameField,1,1);
-        grid.add(new Label("Attribute:"),0,2);
+        grid.add(new Label("属性:"),0,2);
         grid.add(attrField,1,2);
 
         getDialogPane().setContent(grid);
