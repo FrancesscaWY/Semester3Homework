@@ -1,0 +1,6 @@
+# ninja log v6
+1	59	1729645667088958688	CMakeFiles/lab3.dir/main.cpp.o.ddi	1675cfabc01dd36c
+59	62	1729645667148959406	CMakeFiles/lab3.dir/CXX.dd	1fecc609dff11f38
+62	312	1729645667152292779	CMakeFiles/lab3.dir/main.cpp.o	ee820d4a0ffcaae5
+312	354	1729645667402295772	lab3	de1107697f50a6e4
+59	62	1729645667148959406	CMakeFiles/lab3.dir/main.cpp.o.modmap	1fecc609dff11f38
