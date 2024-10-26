@@ -7,34 +7,40 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
 public class RelationshipDialog extends Dialog<Relationship>{
-        private Relationship relation;
-        public RelationshipDialog(Relationship rel){
-            relation=rel;
-            this.setTitle("");
-            ButtonType okButtonType = new ButtonType("确认",ButtonType.OK.getButtonData());
-            getDialogPane().getButtonTypes().addAll(okButtonType,ButtonType.CANCEL);
+    private Relationship relation;
+    public RelationshipDialog(Relationship rel) {
+        relation = rel;
+        this.setTitle("编辑关系信息");
+        // 添加确认和取消按钮
+        ButtonType okButtonType = new ButtonType("确认", ButtonType.OK.getButtonData());
+        getDialogPane().getButtonTypes().addAll(okButtonType, ButtonType.CANCEL);
 
-            GridPane grid = new GridPane();
-            grid.setHgap(10);
-            grid.setVgap(10);
+        // 使用格网布局，展示实体的属性
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
 
-            TextField nameField = new TextField(relation.getName());
-            TextField attrField = new TextField(relation.getAttribute());
+        // 创建文本输入框
+        TextField nameField = new TextField(relation.getName());
+        TextField attrField = new TextField(relation.getAttribute());
 
-            grid.add(new Label(" "),0,1);
-            grid.add(nameField,1,1);
-            grid.add(new Label(" "),0,2);
-            grid.add(attrField,1,2);
+        // 将输入框放入格网中
+        grid.add(new Label("名称:"), 0, 1);
+        grid.add(nameField, 1, 1);
+        grid.add(new Label("属性:"), 0, 2);
+        grid.add(attrField, 1, 2);
 
-            getDialogPane().setContent(grid);
+        getDialogPane().setContent(grid);
 
-            setResultConverter(dialogButton->{
-                if(dialogButton == okButtonType){
-                    relation.setName(nameField.getText());
-                    relation.setAttribute(attrField.getText());
-                    return relation;
-                }
-                return null;
-            });
-        }
+        // 设置确认按钮的行为
+        setResultConverter(dialogButton -> {
+            if (dialogButton == okButtonType) {
+                // 更新实体信息
+                relation.setName(nameField.getText());
+                relation.setAttribute(attrField.getText());
+                return relation;
+            }
+            return null;
+        });
+    }
 }

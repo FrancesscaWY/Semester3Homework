@@ -14,13 +14,17 @@ public class Relationship extends Edge{
 
 //    Constructor with "form" and "to" parameters
     public Relationship(Entity from,Entity to){
+        super(null,null);
         this.from=from;
         this.to=to;
     }
 //    Constructor with full parameters
-    public Relationship(String name,String attribute,Node from,Node to){
+    public Relationship(String name,String attribute,Entity from,Entity to){
+        super(null,null);
         this.name=name;
         this.attribute=attribute;
+        this.from = from;
+        this.to = to;
     }
 
 //    Method Setters

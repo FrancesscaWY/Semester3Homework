@@ -6,14 +6,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-public class KnowledgeGraph{
-    private Set<Entity> entities;
-    private Set<Relationship> relations;
-    private Map<Entity,Set<Relationship>> outMap;
-    private Map<Entity,Set<Relationship>> inMap;
-    private int seqNumber;
+public class KnowledgeGraph {
+    private Set<Entity> entities; // 实体集合
+    private Set<Relationship> relations; // 关系集合
+    private Map<Entity, Set<Relationship>> outMap; // 出发索引
+    private Map<Entity, Set<Relationship>> inMap;  // 进入索引
+    private int seqNumber; // 实体自动编号
 
-    public KnowledgeGraph(){
+    public KnowledgeGraph() {
         seqNumber = 1;
         entities = new HashSet<Entity>();
         relations = new HashSet<Relationship>();
@@ -21,60 +21,61 @@ public class KnowledgeGraph{
         inMap = new HashMap<>();
     }
 
-//    What's the Optional class in java ?
-    public Optional<Entity> addEntity(String type,String name,String attribute){
-        Entity e = new Entity(seqNumber++,type,name,attribute);
-        if(addEntity(e)){
-            return Optional.ofNullable(e);
-        }else{
-            return Optional.empty();
+    // 创建和添加实体
+    public Optional<Entity> addEntity(String type, String name, String attribute) {
+        Entity e = new Entity(seqNumber++, type, name, attribute);
+        if(addEntity(e)) {
+            return Optional.ofNullable(e); // 添加成功
+        }else {
+            return Optional.empty(); // 添加失败，则返回空
         }
     }
-    public boolean addEntity(Entity e){
+    public boolean addEntity(Entity e) {
         return this.entities.add(e);
     }
-
-    public Optional<Relationship> addRelation(Entity from,Entity to){
+    // 创建与添加关系
+    public Optional<Relationship> addRelation(Entity from, Entity to) {
         Optional<Relationship> r = Optional.empty();
-        if(entities.contains(from)&&entities.contains(to)){
-            Relationship rel = new Relationship(from,to);
-            if(relations.add(rel)){
-                outMap.computeIfAbsent(from,f -> new HashSet<>()).add(rel); // add the outMap index
-                inMap.computeIfAbsent(to,f->new HashSet<>()).add(rel);
+        if(entities.contains(from) && entities.contains(to)) {
+            Relationship rel = new Relationship(from, to);
+            if(relations.add(rel)) { // 添加成功
+                outMap.computeIfAbsent(from, f -> new HashSet<>()).add(rel); // 更新索引
+                inMap.computeIfAbsent(to, f -> new HashSet<>()).add(rel); // 更新索引
+                r = Optional.ofNullable(rel);
             }
         }
         return r;
     }
 
-    public void removeEntity(Entity e){
+    //删除实体
+    public void removeEntity(Entity e) {
         this.entities.remove(e);
-        removeAllRelsFrom(e);
-        removeAllRelsTo(e);
+        removeAllRelsByFrom(e);
+        removeAllRelsByTo(e);
     }
-
-    public void removeAllRelsFrom(Entity from){
-        if(outMap.containsKey(from)){
+    // 根据作为起始节点的所有关系
+    public void removeAllRelsByFrom(Entity from) {
+        if (outMap.containsKey(from)) {
             Set<Relationship> rels = outMap.get(from);
-            relations.removeAll(rels);
-            outMap.remove(from);
+            relations.removeAll(rels); // 删除关系
+            outMap.remove(from); // 删除索引
         }
     }
 
-    public void removeAllRelsTo(Entity to) {
-        if(inMap.containsKey(to)){
-            Set<Relationship> rels= inMap.get(to);
-            relations.removeAll(rels);
-            inMap.remove(to);
+    // 根据作为终止节点的所有关系
+    public void removeAllRelsByTo(Entity to) {
+        if (inMap.containsKey(to)) {
+            Set<Relationship> rels = inMap.get(to);
+            relations.removeAll(rels); // 删除关系
+            inMap.remove(to); // 删除索引
         }
     }
 
-    public Set<Entity> getEntities(){
+    public Set<Entity> getEntities() {
         return entities;
     }
-
     public Set<Relationship> getRelations(){
         return relations;
     }
-
 
 }

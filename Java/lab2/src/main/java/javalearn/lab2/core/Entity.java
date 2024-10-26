@@ -15,14 +15,18 @@ public class Entity extends Node{
     }
 
 //    Constructor with full parameters
-    public Entity(String t, String n, String a){
+    public Entity(int id,String t, String n, String a){
+        super(0);
         type=t;
         name=n;
         attribute=a;
     }
 
-    public Entity(int i, String type, String name, String attribute) {
-        this(" "," "," ");
+    public Entity(String type, String name, String attribute) {
+        super(0);
+        this.type = type;
+        this.name = name;
+        this.attribute = attribute;
     }
 
     //    Method set type,name,attribute

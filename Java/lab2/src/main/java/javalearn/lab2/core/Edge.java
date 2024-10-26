@@ -1,30 +1,35 @@
 package javalearn.lab2.core;
-
 public class Edge {
-    private Node from,to;
+    private Node from, to; // 起始节点和终止节点
 
-    public Edge(){};
-    public Edge(Node f,Node t){
-        setFrom(f);
-        setTo(t);
+    public Edge(Node from, Node to) {
+        setFrom(from);
+        setTo(to);
+    }
+    public Node getFrom() {
+        return from;
     }
 
-    public void setFrom(Node f){from=f;}
-    public void setTo(Node t){to=t;}
+    public void setFrom(Node from) {
+        this.from = from;
+    }
 
-    public Node getFrom(){return from;}
-    public Node getTo(){return to;}
+    public Node getTo() {
+        return to;
+    }
 
+    public void setTo(Node to) {
+        this.to = to;
+    }
     @Override
-    public boolean equals(Object o){
-        if(this==o) return true;
-        if(o==null||getClass()!=o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Edge edge = (Edge) o;
-        return edge.getFrom().equals(this.getFrom())&&edge.getTo().equals(this.getTo());
+        return edge.getFrom().equals(this.getFrom()) && edge.getTo().equals(this.getTo());
     }
-
     @Override
-    public int hashCode(){
-        return Integer.hashCode(Math.addExact(getFrom().getId(),getTo().getId()));
+    public int hashCode() {
+        return Integer.hashCode(Math.addExact(getFrom().getId(), getTo().getId()));
     }
 }
