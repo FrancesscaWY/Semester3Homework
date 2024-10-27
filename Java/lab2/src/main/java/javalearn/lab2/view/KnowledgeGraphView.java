@@ -117,13 +117,15 @@ public class KnowledgeGraphView extends Pane{
                         });
                         // 处理双击事件，改变标签的背景颜色
                         this.setOnMouseClicked(event -> {
-                                if (event.getClickCount() == 2) {
-                                        new EntityDialog(entity).showAndWait().ifPresent(update -> {
-                                                this.updateText(); // 更新标签文本
-                                        });
-                                }else if(event.getButton() == MouseButton.SECONDARY){
-                                        select(this);
-                                }
+                           if(event.getClickCount()==2){
+                                   Editor<Entity> ed =new EntityEditor();
+                                   ed.setTarget(entity);
+                                   new EditorDialog<Entity> (ed).showAndWait().ifPresent(update->{
+                                           this.updateText();
+                                   });
+                           }else if(event.getButton()==MouseButton.SECONDARY){
+                                   select(this);
+                           }
                         });
                 }
 
@@ -175,11 +177,13 @@ public class KnowledgeGraphView extends Pane{
                         label.yProperty().bind(line.startYProperty().add(line.endYProperty()).divide(2).subtract(5));
                         this.getChildren().addAll(line, label);
                         this.setOnMouseClicked(event -> {
-                                if (event.getClickCount() == 2) {
-                                        new RelationshipDialog(relation).showAndWait().ifPresent(update -> {
-                                                this.updateText(); // 更新线标签
-                                        });
-                                }
+                              if(event.getClickCount()==2){
+                                      Editor<Relationship> ed = new RelationshipEditor();
+                                      ed.setTarget(relation);
+                                      new EditorDialog<Relationship>(ed).showAndWait().ifPresent(update->{
+                                              this.updateText();
+                                      });
+                              }
                         });
                 }
                 // 更新线标签

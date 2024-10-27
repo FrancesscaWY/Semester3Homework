@@ -32,7 +32,7 @@ public class KGApp extends Application{
     public void start(Stage primaryStage) throws Exception {
         // 全局采用垂直布局，上中下三个部分
         VBox global = new VBox();
-        global.setPadding(new Insets(6.0));
+        global.setPadding(new Insets(5.0));
 
         // 上排布局与控件
         HBox top = new HBox();

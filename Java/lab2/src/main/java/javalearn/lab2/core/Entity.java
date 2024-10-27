@@ -7,26 +7,12 @@ public class Entity extends Node{
     private String attribute;
 
 
-//    Constructor with no parameter
-    public Entity(){this("","","");}
-//    Constructor with one parameter
-    public Entity(String n){
-        this(" ",n," ");
-    }
-
 //    Constructor with full parameters
     public Entity(int id,String t, String n, String a){
-        super(0);
+        super(id);
         type=t;
         name=n;
         attribute=a;
-    }
-
-    public Entity(String type, String name, String attribute) {
-        super(0);
-        this.type = type;
-        this.name = name;
-        this.attribute = attribute;
     }
 
     //    Method set type,name,attribute
