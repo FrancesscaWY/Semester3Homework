@@ -1,0 +1,16 @@
+# ninja log v6
+43	45	1730640312979708372	CMakeFiles/lab3.dir/application.cpp.o.modmap	2156523260bfc16c
+110	141	1730609376341475426	CMakeFiles/lab3.dir/position.cpp.o	247c905d961233ca
+1	8	1730638588166405284	CMakeFiles/lab3.dir/backtrack.cpp.o.ddi	aaf419d7634024d
+46	275	1730640163967200427	CMakeFiles/lab3.dir/application.cpp.o	89b1873f2a6e74a8
+1	39	1730701099574945549	build.ninja	277b22cb811a2ff8
+43	45	1730640312979708372	CMakeFiles/lab3.dir/main.cpp.o.modmap	2156523260bfc16c
+43	45	1730640312979708372	CMakeFiles/lab3.dir/backtrack.cpp.o.modmap	2156523260bfc16c
+1	43	1730640163920580353	CMakeFiles/lab3.dir/application.cpp.o.ddi	36302c6ae896cc90
+46	260	1730640312983041369	CMakeFiles/lab3.dir/main.cpp.o	ee820d4a0ffcaae5
+43	45	1730640312979708372	CMakeFiles/lab3.dir/CXX.dd	2156523260bfc16c
+57	73	1730638588223102477	CMakeFiles/lab3.dir/backtrack.cpp.o	c120bc60fc473096
+260	306	1730640313196353455	lab3	9eab8be6cad47a95
+43	45	1730640312979708372	CMakeFiles/lab3.dir/position.cpp.o.modmap	2156523260bfc16c
+2	19	1730609376234809118	CMakeFiles/lab3.dir/position.cpp.o.ddi	f7d729ada864d989
+2	43	1730640312939712409	CMakeFiles/lab3.dir/main.cpp.o.ddi	1675cfabc01dd36c
