@@ -3,7 +3,8 @@ project(lab3)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(lab3 main.cpp
+add_executable(lab3
+        main.cpp
         application.cpp
         backtrack.cpp
         position.cpp

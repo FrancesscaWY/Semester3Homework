@@ -15,7 +15,6 @@ public:
         Iterator();
         Iterator(const Position& curP);
         ~Iterator();
-
         Position getNextPosition();
         bool noNextPosition();
 

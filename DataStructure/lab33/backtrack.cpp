@@ -1,4 +1,5 @@
 #include "backtrack.h"
+#include "position.h"
 BackTrack::BackTrack() {};
 BackTrack::BackTrack(const Application& thisApp) {
     this->app = thisApp;

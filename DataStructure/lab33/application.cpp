@@ -11,17 +11,22 @@ using namespace std;
 
 // Board
 int chessboard[8][8] = {0};
-
 void Application::initialize() {
     // Reset the chessboard if needed
     for (int i = 0; i < 8; i++)
         for (int j = 0; j < 8; j++)
             chessboard[i][j] = 0;
 }
-
 Position Application::getStartPosition() {
     return Position(0, 0, chessboard[0][0]);
 }
+void Application::progress(const Position& p) {
+    chessboard[p.getRow()][p.getColumn()] = 1; // Place a queen
+}
+void Application::goBack(const Position& p) {
+    chessboard[p.getRow()][p.getColumn()] = 0; // Remove the queen
+}
+
 
 bool Application::isValid(const Position& p) {
     const int row = p.getRow();
@@ -29,7 +34,6 @@ bool Application::isValid(const Position& p) {
     if (row < 0 || column < 0 || column >= 8 || row >= 8) {
         return false;
     }
-
     int sum1 = 0,sum2=0,sum3=0,sum4=0;
     // Check column and row for existing queens
     for (int i = 0; i < 8; i++) {
@@ -48,14 +52,10 @@ bool Application::isValid(const Position& p) {
             sum4+=chessboard[i][j];
         }
     }
-
-    // std::cout << sum1 << " " << sum2 << " " << sum3 << " " << sum4 << std::endl;
     return sum1==0&&sum2==0&&sum3==0&&sum4==0;
 }
 
-void Application::progress(const Position& p) {
-    chessboard[p.getRow()][p.getColumn()] = 1; // Place a queen
-}
+
 
 bool Application::success(const Position& p) {
     int count = 0;
@@ -68,11 +68,6 @@ bool Application::success(const Position& p) {
     }
     return count == 8;
 }
-
-void Application::goBack(const Position& p) {
-    chessboard[p.getRow()][p.getColumn()] = 0; // Remove the queen
-}
-
 void Application::print() {
     cout << "Solution Found:\n";
     for (int i = 0; i < 8; i++) {
@@ -91,12 +86,10 @@ struct itrPosition {
     int column;
     int value;
 };
-
 //application iterator
 Application::Iterator::Iterator() {
     currItrPosPtr = NULL;
 }
-
 Application::Iterator::Iterator(const Position& currPos) {
     itrPosition* p = new itrPosition;
     p->row = currPos.getRow();
@@ -104,7 +97,6 @@ Application::Iterator::Iterator(const Position& currPos) {
     p->value = currPos.getValue();
     currItrPosPtr = p;
 }
-
 Position Application::Iterator::getNextPosition() {
     int row = ((itrPosition*)currItrPosPtr)->row;
     int column = ((itrPosition*)currItrPosPtr)->column;
@@ -117,11 +109,9 @@ Position Application::Iterator::getNextPosition() {
     currItrPosPtr = new itrPosition{row, column, value};
     return Position(row, column, value); //return the new position
 }
-
 bool Application::Iterator::noNextPosition() {
     return ((itrPosition*)currItrPosPtr)->column == 7 && ((itrPosition*)currItrPosPtr)->row == 7;
 }
-
 Application::Iterator::~Iterator() {
     delete (itrPosition*)currItrPosPtr;
 }
