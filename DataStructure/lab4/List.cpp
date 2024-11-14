@@ -8,7 +8,9 @@ template <typename T>
 List<T>::List() {
     head = nullptr;
     tail = nullptr;
+    length = 0;
 }
+
 template <typename T>
 List<T>::List(const List<T>& x) {
     head = nullptr;
