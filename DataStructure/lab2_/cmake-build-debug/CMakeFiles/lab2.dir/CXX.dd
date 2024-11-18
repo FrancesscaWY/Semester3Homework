@@ -1,0 +1,7 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/lab2.dir/main.cpp.o: dyndep
+
+build CMakeFiles/lab2.dir/tasks/Employee.cpp.o: dyndep
+
+build CMakeFiles/lab2.dir/tasks/company.cpp.o: dyndep
+

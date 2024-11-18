@@ -1,0 +1,21 @@
+# ninja log v6
+2074	2165	1729251824432750864	lab2	62ee0a576863962f
+234	242	1729251822592766712	CMakeFiles/lab2.dir/tasks/company.cpp.o.modmap	4c5fd35c3f21a4d9
+3	190	1729233870494598409	CMakeFiles/lab2.dir/tasks/Employee.cpp.o.ddi	df1cb6028546bf2d
+234	242	1729251822592766712	CMakeFiles/lab2.dir/CXX.dd	4c5fd35c3f21a4d9
+234	242	1729251822592766712	/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/lab2.dir/CXXModules.json	4c5fd35c3f21a4d9
+234	242	1729251822592766712	CMakeFiles/lab2.dir/tasks/Employee.cpp.o.modmap	4c5fd35c3f21a4d9
+243	2074	1729251822602766628	CMakeFiles/lab2.dir/main.cpp.o	3562b67182c41b46
+139	932	1729234273572346146	CMakeFiles/lab2.dir/tasks/company.cpp.o	f95732f051f4762
+2	133	1729234273435662177	CMakeFiles/lab2.dir/tasks/company.cpp.o.ddi	51c6a8c54b0bca97
+234	242	1729251822592766712	CMakeFiles/lab2.dir/main.cpp.o.modmap	4c5fd35c3f21a4d9
+3	234	1729251822362768673	CMakeFiles/lab2.dir/main.cpp.o.ddi	7d3424363960ecef
+319	1268	1729233870811305287	CMakeFiles/lab2.dir/tasks/Employee.cpp.o	5748671e9c9677d7
+3	219	1729251914798307306	CMakeFiles/lab2.dir/main.cpp.o.ddi	7d3424363960ecef
+219	226	1729251915014970622	CMakeFiles/lab2.dir/CXX.dd	4c5fd35c3f21a4d9
+219	226	1729251915014970622	/home/francessca/OtherProjects/Semester3H/DataStructure/lab2_/cmake-build-debug/CMakeFiles/lab2.dir/CXXModules.json	4c5fd35c3f21a4d9
+219	226	1729251915014970622	CMakeFiles/lab2.dir/main.cpp.o.modmap	4c5fd35c3f21a4d9
+219	226	1729251915014970622	CMakeFiles/lab2.dir/tasks/Employee.cpp.o.modmap	4c5fd35c3f21a4d9
+219	226	1729251915014970622	CMakeFiles/lab2.dir/tasks/company.cpp.o.modmap	4c5fd35c3f21a4d9
+226	2049	1729251915021637185	CMakeFiles/lab2.dir/main.cpp.o	3562b67182c41b46
+2049	2147	1729251916844942166	lab2	62ee0a576863962f

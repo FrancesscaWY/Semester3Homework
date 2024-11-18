@@ -1,0 +1,15 @@
+# ninja log v6
+1	145	1728736425293404338	CMakeFiles/task2.dir/company.cpp.o	dab2fba7f990edf4
+1	174	1728735800707302478	CMakeFiles/task2.dir/employee.cpp.o	70faa39caae36fe7
+0	12	1728737155269485120	build.ninja	aba62a4fdfbcc7a3
+1	116	1728737155272818394	CMakeFiles/task2.dir/main.cpp.o	344e9c9ad2e9eefc
+1	200	1728737155272818394	CMakeFiles/task2.dir/company.cpp.o	dab2fba7f990edf4
+200	240	1728737155472814833	task2	d8ea6ce30839bcf4
+1	148	1728737436688051746	CMakeFiles/task2.dir/company.cpp.o	dab2fba7f990edf4
+148	184	1728737436834716016	task2	d8ea6ce30839bcf4
+1	104	1728737489687189588	CMakeFiles/task2.dir/main.cpp.o	344e9c9ad2e9eefc
+104	146	1728737489787187967	task2	d8ea6ce30839bcf4
+2	147	1728786059317155095	CMakeFiles/task2.dir/main.cpp.o	344e9c9ad2e9eefc
+2	173	1728786059317155095	CMakeFiles/task2.dir/employee.cpp.o	70faa39caae36fe7
+1	179	1728786059317155095	CMakeFiles/task2.dir/company.cpp.o	dab2fba7f990edf4
+179	218	1728786059493822160	task2	d8ea6ce30839bcf4
